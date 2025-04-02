@@ -1,12 +1,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job-20-sec
+  name: job-10-sec
 spec:
   ttlSecondsAfterFinished: 20
   template:
     metadata:
-        name: job-20-sec
+        name: job-10-sec
         labels: {
            app: controlm,
            controlm-order-id-internal-label : controlm.00001.1
@@ -18,7 +18,7 @@ spec:
         image: ubuntu:latest
         # Just spin & wait forever
         command: [ "/bin/bash", "-c", "--" ]
-        args: [ "echo START-`date`; sleep 21; echo END-`date`; exit" ]
+        args: [ "echo START-`date`; sleep 10 ; echo END-`date`; exit" ]
       restartPolicy: Never
       
 
