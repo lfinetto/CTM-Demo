@@ -1,12 +1,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job.20.sec
+  name: job-20-sec
 spec:
   ttlSecondsAfterFinished: 20
   template:
     metadata:
-        name: job.20.sec
+        name: job-20-sec
         labels: {
            app: controlm,
            controlm-order-id-internal-label : controlm.00001.1
